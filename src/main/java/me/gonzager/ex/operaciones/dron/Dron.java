@@ -11,6 +11,11 @@ public abstract class Dron {
         return procesamiento;
     }
 
+    public Dron(Double procesamiento, Mision mision) {
+        this.procesamiento = procesamiento;
+        this.mision = mision;
+    }
+
     public void setProcesamiento(Double procesamiento) {
         this.procesamiento = procesamiento;
     }

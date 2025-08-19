@@ -6,6 +6,12 @@ public class Sensor {
     private Boolean mejorasTecnologicas;
 
     
+    public Sensor(int capacidad, int durabilidad, Boolean mejorasTecnologicas) {
+        this.capacidad = capacidad;
+        this.durabilidad = durabilidad;
+        this.mejorasTecnologicas = mejorasTecnologicas;
+    }
+
     public int getCapacidad() {
         return capacidad;
     }
