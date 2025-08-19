@@ -27,12 +27,19 @@ public abstract class Dron {
         return autonomia;
     }
 
-    public void setAutonomia(Double autonomia) {
-        this.autonomia = autonomia;
-    }
-
-
     public double eficienciaOperativa() {
         return autonomia * 10 + mision.eficienciaOperativa();
+    }
+
+    public Boolean esAvanzadoSegunTipo() {
+        return true;
+    }
+
+    public void disminuirAutonomia() {
+        this.autonomia = this.autonomia * 0.95;
+    }
+
+    public boolean esAvanzado() {
+        return this.esAvanzadoSegunTipo() || this.mision.esAvanzadoSegunMision(this);
     }
 }
